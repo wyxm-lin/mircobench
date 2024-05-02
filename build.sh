@@ -1,0 +1,2 @@
+g++ -O2 -std=c++11 -o server server.cc -I ../../eRPC/src -I ../../eRPC/third_party/asio/include -L ../../eRPC/build -lerpc -lpthread -lnuma -ldl -libverbs -DERPC_INFINIBAND=true
+g++ -O2 -std=c++11 -o client client.cc -I ../../eRPC/src -I ../../eRPC/third_party/asio/include -L ../../eRPC/build -lerpc -lpthread -lnuma -ldl -libverbs -DERPC_INFINIBAND=true
