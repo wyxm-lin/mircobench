@@ -2,7 +2,7 @@
 #include <fstream>
 #include <iostream>
 using namespace std;
-static constexpr uint64_t BLOCKS_PER_SERVER = 500000;
+static constexpr uint64_t BLOCKS_PER_SERVER = 512000;
 
 uint64_t Index[BLOCKS_PER_SERVER * 2];
 uint64_t WrongIndex[BLOCKS_PER_SERVER * 2];

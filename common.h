@@ -42,7 +42,7 @@ static constexpr uint64_t BLOCKSIZE = 3824 - sizeof(CommonMsg);
 static constexpr uint64_t PIPLINE_PKT_DEPTH = 32;
 static constexpr uint64_t SINGLE_PKT_SIZE = 3824;
 static constexpr uint64_t MAX_MSG_SIZE = 8353520;
-static constexpr uint64_t BLOCKS_PER_SERVER = 500000;
+static constexpr uint64_t BLOCKS_PER_SERVER = 512000;
 // static constexpr uint64_t PIPLINE_PKT_SIZE = (4 * 3824 - sizeof(CommonMsg));
 // static constexpr uint64_t PIPLINE_PKT_NUM =
 //     (BLOCKSIZE + PIPLINE_PKT_SIZE - 1) / PIPLINE_PKT_SIZE;
