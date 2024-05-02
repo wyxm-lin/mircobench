@@ -87,25 +87,6 @@ void req_handler(erpc::ReqHandle *req_handle, void *) {
 }
 
 static void init(string configname) {
-//   // 分配大页内存
-//   uint64_t size = (BLOCKS_PER_SERVER + 1) * 4 * 1024;  // n*4KB
-//   buffer = (char *)mmap(nullptr, size, PROT_READ | PROT_WRITE,
-//                         MAP_PRIVATE | MAP_ANONYMOUS | MAP_HUGETLB, -1, 0);
-//   if (buffer == MAP_FAILED) {
-//     std::cerr << "Failed to allocate memory." << std::endl;
-//     return;
-//   }
-//   uintptr_t address = reinterpret_cast<uintptr_t>(buffer);
-//   if (address % (4 * 1024) != 0) {
-//     std::cerr << "Memory not aligned to 4KB." << std::endl;
-//     return;
-//   }
-
-//   // 全盘扫描，mmap只在实际使用时分配内存
-//   for (int i = 0; i < BLOCKS_PER_SERVER + 1; i++) {
-//     memset(buffer + i * BLOCKSIZE, 0, BLOCKSIZE);
-//   }
-
   // 读取索引
   std::fstream fs("index/index100", std::ios::in);
   fs.read(reinterpret_cast<char *>(Index), sizeof(Index));
@@ -161,7 +142,6 @@ static void init(string configname) {
   fs.close();
 
   rpc->run_event_loop(1000000000);
-//   munmap(buffer, size);
 }
 
 int main(int argc, char *argv[]) {

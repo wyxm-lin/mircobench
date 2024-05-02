@@ -6,11 +6,13 @@
 #include <queue>
 #include <stack>
 #include <string>
+#include <chrono>
 
 #include "/usr/include/x86_64-linux-gnu/sys/time.h"
 #include "common.h"
 #include <string>
 
+using namespace std;
 using std::string;
 
 static int hostid;
@@ -157,21 +159,7 @@ int dbs_read(uint64_t blockID, void *dstBuf, uint64_t len) {
 static char tmp1[1050 * BLOCKSIZE];
 static char tmp2[1050 * BLOCKSIZE];
 
-static void test() {
-//   // 分配大页内存
-//   uint64_t size = 1024L * 4 * 1024;  // 1024*4KB
-//   void *ptr = mmap(nullptr, size, PROT_READ | PROT_WRITE,
-//                    MAP_PRIVATE | MAP_ANONYMOUS | MAP_HUGETLB, -1, 0); // 此处使用了大页内存
-//   if (ptr == MAP_FAILED) {
-//     std::cerr << "Failed to allocate memory." << std::endl;
-//     return;
-//   }
-//   uintptr_t address = reinterpret_cast<uintptr_t>(ptr);
-//   if (address % (4 * 1024) != 0) {
-//     std::cerr << "Memory not aligned to 4KB." << std::endl;
-//     return;
-//   }
-
+static void test(int Type) {
   for (int percent = 100; percent <= 100; percent += 10) { // c为正确率
     // 读取索引
     std::fstream fs("index/index" + std::to_string(percent), std::ios::in);
@@ -180,45 +168,35 @@ static void test() {
 
     std::cerr << "index" << percent << std::endl;
 
-    for (int l = 1024; l <= 1024; l *= 2) {
-    //   // 仅仅是做正确性验证
-    //   for (int i = 0; i < BLOCKSIZE * l; i++) 
-    //     tmp1[i] = rand() % 256;
-    //   for (int i = 0; i + l <= 2 * BLOCKS_PER_SERVER;) { // i是块号
-    //     memset(tmp2, 0, BLOCKSIZE * l);
-    //     dbs_write(i, tmp1, l);
-    //     dbs_read(i, tmp2, l);
-    //     // if (memcmp(tmp1, tmp2, BLOCKSIZE * l) != 0) {
-    //     //   std::cerr << "Correctness Test Faild!" << std::endl;
-    //     //   exit(-1);
-    //     // }
-    //     i += l;
-    //   }
-
+    for (int l = 1; l <= 1024; l *= 2) {
       // 真正开始测试
       int cs = 2 * BLOCKS_PER_SERVER; // 总的容量大小
-      uint64_t time_usec;
-      struct timeval start, end;
-
-      // // std::cerr << "Write Test..." << std::endl;
-      gettimeofday(&start, nullptr);
+      int ops = cs / l;
+      auto start = std::chrono::high_resolution_clock::now();
       for (int i = 0; i + l <= cs;) { // i是块号的意思
-        dbs_write(i, nullptr, l);
-        // dbs_read(i % (2 * BLOCKS_PER_SERVER), ptr, l);
+        if (Type == 0)
+          dbs_write(i, nullptr, l);
+        else 
+          dbs_read(i, nullptr, l);
         i += l;
       }
-      gettimeofday(&end, nullptr);
-      time_usec =
-          (end.tv_sec - start.tv_sec) * 1000000 + end.tv_usec - start.tv_usec;
-      std::cout << 8.0 * cs * BLOCKSIZE / 1000 / time_usec << " ";
+      auto end = std::chrono::high_resolution_clock::now();
+      auto duration = std::chrono::duration_cast<std::chrono::microseconds>(end - start);
+      if (Type == 0) {
+        cout << "Write\n";
+      }
+      else {
+        cout << "Read\n";
+      }
+      cout << "All Time is " << duration.count() << " us" << endl;
+      cout << "IOPS is " << 1000000.0 * ops / duration.count() << endl;
+      cout << "Latency is " << 1.0 * duration.count() / ops << " us" << endl;
+      cout << "Throughput is " << 1000000.0 * cs * BLOCKSIZE / 1024 / 1024 / 1024 / duration.count() << " GiB/s" << " = " << 1000000.0 * cs * BLOCKSIZE / 1024 / 1024 / duration.count() << " MiB/s" << endl;
       std::flush(std::cout);
     }
     std::cerr << std::endl;
-  }
-
-  assert(avail.size() == N);
-  std::cerr << avail.size() << std::endl;
-//   munmap(ptr, size);
+  }  
+  // std::cerr << avail.size() << std::endl;
 }
 
 static void init(string configname) {
@@ -260,7 +238,8 @@ static void init(string configname) {
 int main(int argc, char *argv[]) {
   string configfilename = "config" + std::to_string(atoi(argv[1]));
   hostid = atoi(argv[2]);
+  int Type = atoi(argv[3]);
   init(configfilename);
-  test();
+  test(Type);
   delete rpc;
 }
