@@ -1,5 +1,5 @@
 #include <sys/mman.h>
-
+#include <chrono>
 #include <fstream>
 #include <iostream>
 #include <map>
@@ -58,7 +58,7 @@ void req_handler(erpc::ReqHandle *req_handle, void *) {
     ctx.bid = ms->bid + seq;
     ctx.ms = (uint64_t)ms;
     void *ptr = (void *)(ms->ptr + seq * BLOCKSIZE);
-    better_memcpy(sdmsg + 1, ptr, BLOCKSIZE);
+    // better_memcpy(sdmsg + 1, ptr, BLOCKSIZE);
     rpc->resize_msg_buffer(&req, sizeof(CommonMsg) + BLOCKSIZE);
     rpc->enqueue_request(serverSess[Index[ctx.bid]], kReqType, &req, &resp,
                          cont_func, (void *)k);
@@ -111,7 +111,7 @@ int dbs_write(uint64_t blockID, void *srcBuf, uint64_t len) { // len是包大小
     ctx.bid = ms->bid + i;
     ctx.ms = reinterpret_cast<uint64_t>(ms);
     void *src = (void *)((uint64_t)srcBuf + i * BLOCKSIZE);
-    better_memcpy(msg + 1, src, BLOCKSIZE);
+    // better_memcpy(msg + 1, src, BLOCKSIZE);
     rpc->resize_msg_buffer(&req, sizeof(CommonMsg) + BLOCKSIZE);
     rpc->enqueue_request(serverSess[Index[ctx.bid]], kReqType, &req, &resp,
                          cont_func, (void *)k);
@@ -158,42 +158,42 @@ static char tmp1[1050 * BLOCKSIZE];
 static char tmp2[1050 * BLOCKSIZE];
 
 static void test() {
-  // 分配大页内存
-  uint64_t size = 1024L * 4 * 1024;  // 1024*4KB
-  void *ptr = mmap(nullptr, size, PROT_READ | PROT_WRITE,
-                   MAP_PRIVATE | MAP_ANONYMOUS | MAP_HUGETLB, -1, 0);
-  if (ptr == MAP_FAILED) {
-    std::cerr << "Failed to allocate memory." << std::endl;
-    return;
-  }
-  uintptr_t address = reinterpret_cast<uintptr_t>(ptr);
-  if (address % (4 * 1024) != 0) {
-    std::cerr << "Memory not aligned to 4KB." << std::endl;
-    return;
-  }
+//   // 分配大页内存
+//   uint64_t size = 1024L * 4 * 1024;  // 1024*4KB
+//   void *ptr = mmap(nullptr, size, PROT_READ | PROT_WRITE,
+//                    MAP_PRIVATE | MAP_ANONYMOUS | MAP_HUGETLB, -1, 0); // 此处使用了大页内存
+//   if (ptr == MAP_FAILED) {
+//     std::cerr << "Failed to allocate memory." << std::endl;
+//     return;
+//   }
+//   uintptr_t address = reinterpret_cast<uintptr_t>(ptr);
+//   if (address % (4 * 1024) != 0) {
+//     std::cerr << "Memory not aligned to 4KB." << std::endl;
+//     return;
+//   }
 
-  for (int c = 100; c <= 100; c += 10) { // c为正确率
+  for (int percent = 100; percent <= 100; percent += 10) { // c为正确率
     // 读取索引
-    std::fstream fs("index/index" + std::to_string(c), std::ios::in);
+    std::fstream fs("index/index" + std::to_string(percent), std::ios::in);
     fs.read(reinterpret_cast<char *>(Index), sizeof(Index));
     fs.close();
 
-    std::cerr << "index" << c << std::endl;
+    std::cerr << "index" << percent << std::endl;
 
     for (int l = 1024; l <= 1024; l *= 2) {
-      // 仅仅是做正确性验证
-      for (int i = 0; i < BLOCKSIZE * l; i++) 
-        tmp1[i] = rand() % 256;
-      for (int i = 0; i + l <= 2 * BLOCKS_PER_SERVER;) { // i是块号
-        memset(tmp2, 0, BLOCKSIZE * l);
-        dbs_write(i, tmp1, l);
-        dbs_read(i, tmp2, l);
-        // if (memcmp(tmp1, tmp2, BLOCKSIZE * l) != 0) {
-        //   std::cerr << "Correctness Test Faild!" << std::endl;
-        //   exit(-1);
-        // }
-        i += l;
-      }
+    //   // 仅仅是做正确性验证
+    //   for (int i = 0; i < BLOCKSIZE * l; i++) 
+    //     tmp1[i] = rand() % 256;
+    //   for (int i = 0; i + l <= 2 * BLOCKS_PER_SERVER;) { // i是块号
+    //     memset(tmp2, 0, BLOCKSIZE * l);
+    //     dbs_write(i, tmp1, l);
+    //     dbs_read(i, tmp2, l);
+    //     // if (memcmp(tmp1, tmp2, BLOCKSIZE * l) != 0) {
+    //     //   std::cerr << "Correctness Test Faild!" << std::endl;
+    //     //   exit(-1);
+    //     // }
+    //     i += l;
+    //   }
 
       // 真正开始测试
       int cs = 2 * BLOCKS_PER_SERVER; // 总的容量大小
@@ -203,7 +203,7 @@ static void test() {
       // // std::cerr << "Write Test..." << std::endl;
       gettimeofday(&start, nullptr);
       for (int i = 0; i + l <= cs;) { // i是块号的意思
-        dbs_write(i, ptr, l);
+        dbs_write(i, nullptr, l);
         // dbs_read(i % (2 * BLOCKS_PER_SERVER), ptr, l);
         i += l;
       }
@@ -218,7 +218,7 @@ static void test() {
 
   assert(avail.size() == N);
   std::cerr << avail.size() << std::endl;
-  munmap(ptr, size);
+//   munmap(ptr, size);
 }
 
 static void init(string configname) {
