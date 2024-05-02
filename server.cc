@@ -70,7 +70,6 @@ void req_handler(erpc::ReqHandle *req_handle, void *) {
   }
 
   else {
-    exit(-1);
     int64_t k = avail.front();
     avail.pop();
     erpc::MsgBuffer &req = reqs[k];
@@ -127,14 +126,14 @@ static void init(string configname) {
   }
 
   if (hostid == 0) {
-    rpc->run_event_loop(3000);
+    rpc->run_event_loop(10000);
     std::cerr << serverAddr << " connecting" << std::endl;
     serverSess = rpc->create_session(serverAddr, 0);
     while (!rpc->is_connected(serverSess)) rpc->run_event_loop_once();
     std::cerr << serverAddr << " connected" << std::endl;
   }
 
-  rpc->run_event_loop(3000);
+  rpc->run_event_loop(10000);
   std::cerr << clientAddr << " connecting" << std::endl;
   clientSess = rpc->create_session(clientAddr, 0);
   while (!rpc->is_connected(clientSess)) rpc->run_event_loop_once();

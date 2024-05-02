@@ -160,7 +160,7 @@ static char tmp1[1050 * BLOCKSIZE];
 static char tmp2[1050 * BLOCKSIZE];
 
 static void test(int Type) {
-  for (int percent = 100; percent <= 100; percent += 10) { // c为正确率
+  for (int percent = 0; percent <= 100; percent += 10) { // c为正确率
     // 读取索引
     std::fstream fs("index/index" + std::to_string(percent), std::ios::in);
     fs.read(reinterpret_cast<char *>(Index), sizeof(Index));
@@ -183,10 +183,10 @@ static void test(int Type) {
       auto end = std::chrono::high_resolution_clock::now();
       auto duration = std::chrono::duration_cast<std::chrono::microseconds>(end - start);
       if (Type == 0) {
-        cout << "Write\n";
+        cout << "Write " << l << "\n";
       }
       else {
-        cout << "Read\n";
+        cout << "Read " << l << "\n";
       }
       cout << "All Time is " << duration.count() << " us" << endl;
       cout << "IOPS is " << 1000000.0 * ops / duration.count() << endl;
@@ -232,7 +232,7 @@ static void init(string configname) {
   }
   fs.close();
 
-  rpc->run_event_loop(3000);
+  rpc->run_event_loop(10000);
 }
 
 int main(int argc, char *argv[]) {
