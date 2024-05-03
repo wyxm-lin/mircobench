@@ -160,6 +160,11 @@ static char tmp1[1050 * BLOCKSIZE];
 static char tmp2[1050 * BLOCKSIZE];
 
 static void test(int Type) {
+  ofstream OutAllTime("AllTime.txt", ios::app);
+  ofstream OutIOPS("IOPS.txt", ios::app);
+  ofstream OutLatency("Latency.txt", ios::app);
+  ofstream OutThroughput("Throughput.txt", ios::app);
+  ofstream OutThroughput4096("Throughput2.txt", ios::app);
   for (int percent = 0; percent <= 100; percent += 10) { // c为正确率
     // 读取索引
     std::fstream fs("index/index" + std::to_string(percent), std::ios::in);
@@ -173,28 +178,36 @@ static void test(int Type) {
       int cs = 2 * BLOCKS_PER_SERVER; // 总的容量大小
       int ops = cs / l;
       auto start = std::chrono::high_resolution_clock::now();
-      for (int i = 0; i + l <= cs;) { // i是块号的意思
-        if (Type == 0)
+      if (Type == 0) {
+        for (int i = 0; i + l <= cs; i += l) { // i是块号
           dbs_write(i, nullptr, l);
-        else 
+        }
+      }
+      else {
+        for (int i = 0; i + l <= cs; i += l) {
           dbs_read(i, nullptr, l);
-        i += l;
+        }
       }
       auto end = std::chrono::high_resolution_clock::now();
       auto duration = std::chrono::duration_cast<std::chrono::microseconds>(end - start);
-      if (Type == 0) {
-        cout << "Write " << l << "\n";
-      }
-      else {
-        cout << "Read " << l << "\n";
-      }
       cout << "All Time is " << duration.count() << " us" << endl;
       cout << "IOPS is " << 1000000.0 * ops / duration.count() << endl;
       cout << "Latency is " << 1.0 * duration.count() / ops << " us" << endl;
       cout << "Throughput is " << 1000000.0 * cs * BLOCKSIZE / 1024 / 1024 / 1024 / duration.count() << " GiB/s" << " = " << 1000000.0 * cs * BLOCKSIZE / 1024 / 1024 / duration.count() << " MiB/s" << endl;
+      cout << "if use blocksize = 4096, " << "the throughout is  " << 1000000.0 * cs * 4096 / 1024 / 1024 / 1024 / duration.count() << " GiB/s" << " = " << 1000000.0 * cs * 4096 / 1024 / 1024 / duration.count() << " MiB/s" << endl;
       std::flush(std::cout);
+      OutAllTime << duration.count() << " ";
+      OutIOPS << 1000000.0 * ops / duration.count() << " ";
+      OutLatency << 1.0 * duration.count() / ops << " ";
+      OutThroughput << 1000000.0 * cs * BLOCKSIZE / 1024 / 1024 / 1024 / duration.count() << " ";
+      OutThroughput4096 << 1000000.0 * cs * 4096 / 1024 / 1024 / 1024 / duration.count() << " ";
     }
     std::cerr << std::endl;
+    OutAllTime << std::endl;
+    OutIOPS << std::endl;
+    OutLatency << std::endl;
+    OutThroughput << std::endl;
+    OutThroughput4096 << std::endl;
   }  
   // std::cerr << avail.size() << std::endl;
 }
@@ -223,7 +236,6 @@ static void init(string configname) {
   for (int i = 0; i < 3; i++) {
     fs >> addr;
     if (i == hostid) continue;
-    // if (i == 1) continue;
     std::cerr << addr << " connecting" << std::endl;
     int session = rpc->create_session(addr, 0);
     while (!rpc->is_connected(session)) rpc->run_event_loop_once();

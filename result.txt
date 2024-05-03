@@ -1,0 +1,1276 @@
+13作为两server主机,14作为client主机 (测试写)
+hostAddr:10.10.10.14:31852
+80:369488 WARNG: Modded driver unavailable. Performance will be low.
+10.10.10.13:31850 connecting
+10.10.10.13:31850 connected
+10.10.10.13:31851 connecting
+10.10.10.13:31851 connected
+index0
+Write 1
+All Time is 10470402 us
+IOPS is 97799.5
+Latency is 10.225 us
+Throughput is 0.345386 GiB/s = 353.676 MiB/s
+Write 2
+All Time is 6957809 us
+IOPS is 73586.4
+Latency is 13.5895 us
+Throughput is 0.519752 GiB/s = 532.226 MiB/s
+Write 4
+All Time is 4316387 us
+IOPS is 59308.9
+Latency is 16.8609 us
+Throughput is 0.837815 GiB/s = 857.922 MiB/s
+Write 8
+All Time is 2906463 us
+IOPS is 44039.8
+Latency is 22.7067 us
+Throughput is 1.24424 GiB/s = 1274.1 MiB/s
+Write 16
+All Time is 2032369 us
+IOPS is 31490.3
+Latency is 31.7558 us
+Throughput is 1.77937 GiB/s = 1822.07 MiB/s
+Write 32
+All Time is 1571987 us
+IOPS is 20356.4
+Latency is 49.1246 us
+Throughput is 2.30049 GiB/s = 2355.7 MiB/s
+Write 64
+All Time is 1345693 us
+IOPS is 11889.8
+Latency is 84.1058 us
+Throughput is 2.68734 GiB/s = 2751.83 MiB/s
+Write 128
+All Time is 1226794 us
+IOPS is 6521.06
+Latency is 153.349 us
+Throughput is 2.94779 GiB/s = 3018.54 MiB/s
+Write 256
+All Time is 1172206 us
+IOPS is 3412.37
+Latency is 293.051 us
+Throughput is 3.08507 GiB/s = 3159.11 MiB/s
+Write 512
+All Time is 1144671 us
+IOPS is 1747.23
+Latency is 572.336 us
+Throughput is 3.15928 GiB/s = 3235.1 MiB/s
+Write 1024
+All Time is 1130264 us
+IOPS is 884.749
+Latency is 1130.26 us
+Throughput is 3.19955 GiB/s = 3276.34 MiB/s
+
+index10
+Write 1
+All Time is 9998328 us
+IOPS is 102417
+Latency is 9.76399 us
+Throughput is 0.361694 GiB/s = 370.374 MiB/s
+Write 2
+All Time is 6686743 us
+IOPS is 76569.4
+Latency is 13.06 us
+Throughput is 0.540821 GiB/s = 553.801 MiB/s
+Write 4
+All Time is 4173142 us
+IOPS is 61344.7
+Latency is 16.3013 us
+Throughput is 0.866573 GiB/s = 887.371 MiB/s
+Write 8
+All Time is 2804335 us
+IOPS is 45643.6
+Latency is 21.9089 us
+Throughput is 1.28955 GiB/s = 1320.5 MiB/s
+Write 16
+All Time is 1954148 us
+IOPS is 32750.8
+Latency is 30.5336 us
+Throughput is 1.85059 GiB/s = 1895.01 MiB/s
+Write 32
+All Time is 1493068 us
+IOPS is 21432.4
+Latency is 46.6584 us
+Throughput is 2.42208 GiB/s = 2480.21 MiB/s
+Write 64
+All Time is 1280193 us
+IOPS is 12498.1
+Latency is 80.0121 us
+Throughput is 2.82483 GiB/s = 2892.63 MiB/s
+Write 128
+All Time is 1191541 us
+IOPS is 6713.99
+Latency is 148.943 us
+Throughput is 3.03501 GiB/s = 3107.85 MiB/s
+Write 256
+All Time is 1128979 us
+IOPS is 3543.02
+Latency is 282.245 us
+Throughput is 3.20319 GiB/s = 3280.07 MiB/s
+Write 512
+All Time is 1106617 us
+IOPS is 1807.31
+Latency is 553.308 us
+Throughput is 3.26792 GiB/s = 3346.35 MiB/s
+Write 1024
+All Time is 1089462 us
+IOPS is 917.884
+Latency is 1089.46 us
+Throughput is 3.31938 GiB/s = 3399.04 MiB/s
+
+index20
+Write 1
+All Time is 9548714 us
+IOPS is 107240
+Latency is 9.32492 us
+Throughput is 0.378725 GiB/s = 387.814 MiB/s
+Write 2
+All Time is 6415470 us
+IOPS is 79807.1
+Latency is 12.5302 us
+Throughput is 0.563689 GiB/s = 577.218 MiB/s
+Write 4
+All Time is 4028213 us
+IOPS is 63551.8
+Latency is 15.7352 us
+Throughput is 0.897751 GiB/s = 919.297 MiB/s
+Write 8
+All Time is 2708635 us
+IOPS is 47256.3
+Latency is 21.1612 us
+Throughput is 1.33511 GiB/s = 1367.16 MiB/s
+Write 16
+All Time is 1877547 us
+IOPS is 34087
+Latency is 29.3367 us
+Throughput is 1.92609 GiB/s = 1972.32 MiB/s
+Write 32
+All Time is 1436205 us
+IOPS is 22280.9
+Latency is 44.8814 us
+Throughput is 2.51798 GiB/s = 2578.41 MiB/s
+Write 64
+All Time is 1226403 us
+IOPS is 13046.3
+Latency is 76.6502 us
+Throughput is 2.94873 GiB/s = 3019.5 MiB/s
+Write 128
+All Time is 1131084 us
+IOPS is 7072.86
+Latency is 141.386 us
+Throughput is 3.19723 GiB/s = 3273.96 MiB/s
+Write 256
+All Time is 1084081 us
+IOPS is 3689.76
+Latency is 271.02 us
+Throughput is 3.33585 GiB/s = 3415.91 MiB/s
+Write 512
+All Time is 1060537 us
+IOPS is 1885.84
+Latency is 530.269 us
+Throughput is 3.40991 GiB/s = 3491.75 MiB/s
+Write 1024
+All Time is 1060527 us
+IOPS is 942.927
+Latency is 1060.53 us
+Throughput is 3.40994 GiB/s = 3491.78 MiB/s
+
+index30
+Write 1
+All Time is 9104754 us
+IOPS is 112469
+Latency is 8.89136 us
+Throughput is 0.397192 GiB/s = 406.724 MiB/s
+Write 2
+All Time is 6157235 us
+IOPS is 83154.2
+Latency is 12.0258 us
+Throughput is 0.587331 GiB/s = 601.427 MiB/s
+Write 4
+All Time is 3858909 us
+IOPS is 66340
+Latency is 15.0739 us
+Throughput is 0.937139 GiB/s = 959.63 MiB/s
+Write 8
+All Time is 2596816 us
+IOPS is 49291.1
+Latency is 20.2876 us
+Throughput is 1.3926 GiB/s = 1426.03 MiB/s
+Write 16
+All Time is 1813146 us
+IOPS is 35297.8
+Latency is 28.3304 us
+Throughput is 1.99451 GiB/s = 2042.38 MiB/s
+Write 32
+All Time is 1376571 us
+IOPS is 23246.2
+Latency is 43.0178 us
+Throughput is 2.62706 GiB/s = 2690.11 MiB/s
+Write 64
+All Time is 1172379 us
+IOPS is 13647.5
+Latency is 73.2737 us
+Throughput is 3.08461 GiB/s = 3158.64 MiB/s
+Write 128
+All Time is 1086647 us
+IOPS is 7362.1
+Latency is 135.831 us
+Throughput is 3.32797 GiB/s = 3407.85 MiB/s
+Write 256
+All Time is 1044156 us
+IOPS is 3830.85
+Latency is 261.039 us
+Throughput is 3.4634 GiB/s = 3546.52 MiB/s
+Write 512
+All Time is 1021354 us
+IOPS is 1958.18
+Latency is 510.677 us
+Throughput is 3.54072 GiB/s = 3625.7 MiB/s
+Write 1024
+All Time is 1010425 us
+IOPS is 989.683
+Latency is 1010.42 us
+Throughput is 3.57902 GiB/s = 3664.92 MiB/s
+
+index40
+Write 1
+All Time is 8662529 us
+IOPS is 118210
+Latency is 8.4595 us
+Throughput is 0.417469 GiB/s = 427.488 MiB/s
+Write 2
+All Time is 5890773 us
+IOPS is 86915.6
+Latency is 11.5054 us
+Throughput is 0.613898 GiB/s = 628.631 MiB/s
+Write 4
+All Time is 3704967 us
+IOPS is 69096.4
+Latency is 14.4725 us
+Throughput is 0.976077 GiB/s = 999.503 MiB/s
+Write 8
+All Time is 2488347 us
+IOPS is 51439.8
+Latency is 19.4402 us
+Throughput is 1.45331 GiB/s = 1488.19 MiB/s
+Write 16
+All Time is 1725907 us
+IOPS is 37082
+Latency is 26.9673 us
+Throughput is 2.09532 GiB/s = 2145.61 MiB/s
+Write 32
+All Time is 1303560 us
+IOPS is 24548.2
+Latency is 40.7362 us
+Throughput is 2.7742 GiB/s = 2840.78 MiB/s
+Write 64
+All Time is 1120970 us
+IOPS is 14273.4
+Latency is 70.0606 us
+Throughput is 3.22607 GiB/s = 3303.5 MiB/s
+Write 128
+All Time is 1042695 us
+IOPS is 7672.43
+Latency is 130.337 us
+Throughput is 3.46826 GiB/s = 3551.49 MiB/s
+Write 256
+All Time is 1001837 us
+IOPS is 3992.67
+Latency is 250.459 us
+Throughput is 3.6097 GiB/s = 3696.33 MiB/s
+Write 512
+All Time is 981442 us
+IOPS is 2037.82
+Latency is 490.721 us
+Throughput is 3.68471 GiB/s = 3773.15 MiB/s
+Write 1024
+All Time is 970898 us
+IOPS is 1029.97
+Latency is 970.898 us
+Throughput is 3.72473 GiB/s = 3814.12 MiB/s
+
+index50
+Write 1
+All Time is 8219481 us
+IOPS is 124582
+Latency is 8.02684 us
+Throughput is 0.439971 GiB/s = 450.53 MiB/s
+Write 2
+All Time is 5623315 us
+IOPS is 91049.5
+Latency is 10.983 us
+Throughput is 0.643096 GiB/s = 658.531 MiB/s
+Write 4
+All Time is 3553670 us
+IOPS is 72038.2
+Latency is 13.8815 us
+Throughput is 1.01763 GiB/s = 1042.06 MiB/s
+Write 8
+All Time is 2394086 us
+IOPS is 53465.1
+Latency is 18.7038 us
+Throughput is 1.51053 GiB/s = 1546.78 MiB/s
+Write 16
+All Time is 1651133 us
+IOPS is 38761.3
+Latency is 25.799 us
+Throughput is 2.19021 GiB/s = 2242.78 MiB/s
+Write 32
+All Time is 1240178 us
+IOPS is 25802.7
+Latency is 38.7556 us
+Throughput is 2.91598 GiB/s = 2985.96 MiB/s
+Write 64
+All Time is 1079849 us
+IOPS is 14816.9
+Latency is 67.4906 us
+Throughput is 3.34892 GiB/s = 3429.3 MiB/s
+Write 128
+All Time is 1002087 us
+IOPS is 7983.34
+Latency is 125.261 us
+Throughput is 3.6088 GiB/s = 3695.41 MiB/s
+Write 256
+All Time is 959493 us
+IOPS is 4168.87
+Latency is 239.873 us
+Throughput is 3.769 GiB/s = 3859.46 MiB/s
+Write 512
+All Time is 942197 us
+IOPS is 2122.7
+Latency is 471.099 us
+Throughput is 3.83819 GiB/s = 3930.31 MiB/s
+Write 1024
+All Time is 931791 us
+IOPS is 1073.2
+Latency is 931.791 us
+Throughput is 3.88106 GiB/s = 3974.2 MiB/s
+
+index60
+Write 1
+All Time is 7772601 us
+IOPS is 131745
+Latency is 7.59043 us
+Throughput is 0.465267 GiB/s = 476.433 MiB/s
+Write 2
+All Time is 5355563 us
+IOPS is 95601.5
+Latency is 10.4601 us
+Throughput is 0.675248 GiB/s = 691.454 MiB/s
+Write 4
+All Time is 3400109 us
+IOPS is 75291.7
+Latency is 13.2817 us
+Throughput is 1.06359 GiB/s = 1089.12 MiB/s
+Write 8
+All Time is 2285961 us
+IOPS is 55994
+Latency is 17.8591 us
+Throughput is 1.58197 GiB/s = 1619.94 MiB/s
+Write 16
+All Time is 1587241 us
+IOPS is 40321.5
+Latency is 24.8006 us
+Throughput is 2.27838 GiB/s = 2333.06 MiB/s
+Write 32
+All Time is 1177180 us
+IOPS is 27183.6
+Latency is 36.7869 us
+Throughput is 3.07203 GiB/s = 3145.76 MiB/s
+Write 64
+All Time is 1018036 us
+IOPS is 15716.5
+Latency is 63.6272 us
+Throughput is 3.55226 GiB/s = 3637.52 MiB/s
+Write 128
+All Time is 953565 us
+IOPS is 8389.57
+Latency is 119.196 us
+Throughput is 3.79243 GiB/s = 3883.45 MiB/s
+Write 256
+All Time is 919584 us
+IOPS is 4349.79
+Latency is 229.896 us
+Throughput is 3.93257 GiB/s = 4026.96 MiB/s
+Write 512
+All Time is 902616 us
+IOPS is 2215.78
+Latency is 451.308 us
+Throughput is 4.0065 GiB/s = 4102.66 MiB/s
+Write 1024
+All Time is 892795 us
+IOPS is 1120.08
+Latency is 892.795 us
+Throughput is 4.05057 GiB/s = 4147.79 MiB/s
+
+index70
+Write 1
+All Time is 7385383 us
+IOPS is 138652
+Latency is 7.21229 us
+Throughput is 0.489661 GiB/s = 501.413 MiB/s
+Write 2
+All Time is 5096106 us
+IOPS is 100469
+Latency is 9.95333 us
+Throughput is 0.709627 GiB/s = 726.658 MiB/s
+Write 4
+All Time is 3243036 us
+IOPS is 78938.4
+Latency is 12.6681 us
+Throughput is 1.11511 GiB/s = 1141.87 MiB/s
+Write 8
+All Time is 2190789 us
+IOPS is 58426.4
+Latency is 17.1155 us
+Throughput is 1.6507 GiB/s = 1690.32 MiB/s
+Write 16
+All Time is 1507193 us
+IOPS is 42463
+Latency is 23.5499 us
+Throughput is 2.39938 GiB/s = 2456.97 MiB/s
+Write 32
+All Time is 1112814 us
+IOPS is 28755.9
+Latency is 34.7754 us
+Throughput is 3.24972 GiB/s = 3327.71 MiB/s
+Write 64
+All Time is 968109 us
+IOPS is 16527.1
+Latency is 60.5068 us
+Throughput is 3.73546 GiB/s = 3825.11 MiB/s
+Write 128
+All Time is 907823 us
+IOPS is 8812.29
+Latency is 113.478 us
+Throughput is 3.98352 GiB/s = 4079.13 MiB/s
+Write 256
+All Time is 877849 us
+IOPS is 4556.59
+Latency is 219.462 us
+Throughput is 4.11954 GiB/s = 4218.41 MiB/s
+Write 512
+All Time is 861353 us
+IOPS is 2321.93
+Latency is 430.676 us
+Throughput is 4.19843 GiB/s = 4299.2 MiB/s
+Write 1024
+All Time is 856097 us
+IOPS is 1168.09
+Latency is 856.097 us
+Throughput is 4.22421 GiB/s = 4325.59 MiB/s
+
+index80
+Write 1
+All Time is 6936710 us
+IOPS is 147620
+Latency is 6.77413 us
+Throughput is 0.521333 GiB/s = 533.845 MiB/s
+Write 2
+All Time is 4836352 us
+IOPS is 105865
+Latency is 9.446 us
+Throughput is 0.74774 GiB/s = 765.686 MiB/s
+Write 4
+All Time is 3090746 us
+IOPS is 82827.9
+Latency is 12.0732 us
+Throughput is 1.17005 GiB/s = 1198.13 MiB/s
+Write 8
+All Time is 2076743 us
+IOPS is 61635
+Latency is 16.2246 us
+Throughput is 1.74135 GiB/s = 1783.14 MiB/s
+Write 16
+All Time is 1423906 us
+IOPS is 44946.8
+Latency is 22.2485 us
+Throughput is 2.53973 GiB/s = 2600.68 MiB/s
+Write 32
+All Time is 1047522 us
+IOPS is 30548.3
+Latency is 32.7351 us
+Throughput is 3.45227 GiB/s = 3535.13 MiB/s
+Write 64
+All Time is 915368 us
+IOPS is 17479.3
+Latency is 57.2105 us
+Throughput is 3.95069 GiB/s = 4045.5 MiB/s
+Write 128
+All Time is 868354 us
+IOPS is 9212.83
+Latency is 108.544 us
+Throughput is 4.16458 GiB/s = 4264.53 MiB/s
+Write 256
+All Time is 835458 us
+IOPS is 4787.79
+Latency is 208.864 us
+Throughput is 4.32856 GiB/s = 4432.45 MiB/s
+Write 512
+All Time is 821590 us
+IOPS is 2434.3
+Latency is 410.795 us
+Throughput is 4.40163 GiB/s = 4507.27 MiB/s
+Write 1024
+All Time is 814749 us
+IOPS is 1227.37
+Latency is 814.749 us
+Throughput is 4.43859 GiB/s = 4545.11 MiB/s
+
+index90
+Write 1
+All Time is 6473134 us
+IOPS is 158192
+Latency is 6.32142 us
+Throughput is 0.558668 GiB/s = 572.076 MiB/s
+Write 2
+All Time is 4553003 us
+IOPS is 112453
+Latency is 8.89258 us
+Throughput is 0.794274 GiB/s = 813.337 MiB/s
+Write 4
+All Time is 2931980 us
+IOPS is 87313
+Latency is 11.453 us
+Throughput is 1.23341 GiB/s = 1263.01 MiB/s
+Write 8
+All Time is 1971916 us
+IOPS is 64911.5
+Latency is 15.4056 us
+Throughput is 1.83392 GiB/s = 1877.93 MiB/s
+Write 16
+All Time is 1349693 us
+IOPS is 47418.2
+Latency is 21.089 us
+Throughput is 2.67937 GiB/s = 2743.68 MiB/s
+Write 32
+All Time is 987076 us
+IOPS is 32419
+Latency is 30.8461 us
+Throughput is 3.66368 GiB/s = 3751.61 MiB/s
+Write 64
+All Time is 862504 us
+IOPS is 18550.6
+Latency is 53.9065 us
+Throughput is 4.19283 GiB/s = 4293.46 MiB/s
+Write 128
+All Time is 818626 us
+IOPS is 9772.47
+Latency is 102.328 us
+Throughput is 4.41756 GiB/s = 4523.59 MiB/s
+Write 256
+All Time is 795851 us
+IOPS is 5026.07
+Latency is 198.963 us
+Throughput is 4.54398 GiB/s = 4653.04 MiB/s
+Write 512
+All Time is 781819 us
+IOPS is 2558.14
+Latency is 390.909 us
+Throughput is 4.62554 GiB/s = 4736.55 MiB/s
+Write 1024
+All Time is 777223 us
+IOPS is 1286.63
+Latency is 777.223 us
+Throughput is 4.65289 GiB/s = 4764.56 MiB/s
+
+index100
+Write 1
+All Time is 6050601 us
+IOPS is 169239
+Latency is 5.90879 us
+Throughput is 0.597682 GiB/s = 612.026 MiB/s
+Write 2
+All Time is 4300527 us
+IOPS is 119055
+Latency is 8.39947 us
+Throughput is 0.840905 GiB/s = 861.086 MiB/s
+Write 4
+All Time is 2776695 us
+IOPS is 92195.9
+Latency is 10.8465 us
+Throughput is 1.30239 GiB/s = 1333.64 MiB/s
+Write 8
+All Time is 1864946 us
+IOPS is 68634.7
+Latency is 14.5699 us
+Throughput is 1.93911 GiB/s = 1985.65 MiB/s
+Write 16
+All Time is 1266238 us
+IOPS is 50543.4
+Latency is 19.785 us
+Throughput is 2.85597 GiB/s = 2924.51 MiB/s
+Write 32
+All Time is 920214 us
+IOPS is 34774.5
+Latency is 28.7567 us
+Throughput is 3.92988 GiB/s = 4024.2 MiB/s
+Write 64
+All Time is 812906 us
+IOPS is 19682.5
+Latency is 50.8066 us
+Throughput is 4.44865 GiB/s = 4555.42 MiB/s
+Write 128
+All Time is 773439 us
+IOPS is 10343.4
+Latency is 96.6799 us
+Throughput is 4.67565 GiB/s = 4787.87 MiB/s
+Write 256
+All Time is 754881 us
+IOPS is 5298.85
+Latency is 188.72 us
+Throughput is 4.7906 GiB/s = 4905.57 MiB/s
+Write 512
+All Time is 742028 us
+IOPS is 2695.32
+Latency is 371.014 us
+Throughput is 4.87358 GiB/s = 4990.55 MiB/s
+Write 1024
+All Time is 735709 us
+IOPS is 1359.23
+Latency is 735.709 us
+Throughput is 4.91544 GiB/s = 5033.41 MiB/s
+
+13作为两server主机, 14作为client主机
+hostAddr:10.10.10.14:31852
+75:269507 WARNG: Modded driver unavailable. Performance will be low.
+10.10.10.13:31850 connecting
+10.10.10.13:31850 connected
+10.10.10.13:31851 connecting
+10.10.10.13:31851 connected
+index0
+^C
+linguangming@haslab14:~/wyxm/JusteRPC/RealTest/microbench$ sudo ./client 0 2 1
+hostAddr:10.10.10.14:31852
+9:797482 WARNG: Modded driver unavailable. Performance will be low.
+10.10.10.13:31850 connecting
+10.10.10.13:31850 connected
+10.10.10.13:31851 connecting
+10.10.10.13:31851 connected
+index0
+Read 1
+All Time is 8259007 us
+IOPS is 123986
+Latency is 8.06544 us
+Throughput is 0.437865 GiB/s = 448.374 MiB/s
+Read 2
+All Time is 5648647 us
+IOPS is 90641.2
+Latency is 11.0325 us
+Throughput is 0.640212 GiB/s = 655.577 MiB/s
+Read 4
+All Time is 3421486 us
+IOPS is 74821.3
+Latency is 13.3652 us
+Throughput is 1.05695 GiB/s = 1082.31 MiB/s
+Read 8
+All Time is 2375524 us
+IOPS is 53882.8
+Latency is 18.5588 us
+Throughput is 1.52233 GiB/s = 1558.87 MiB/s
+Read 16
+All Time is 1712569 us
+IOPS is 37370.8
+Latency is 26.7589 us
+Throughput is 2.11164 GiB/s = 2162.32 MiB/s
+Read 32
+All Time is 1328964 us
+IOPS is 24078.9
+Latency is 41.5301 us
+Throughput is 2.72117 GiB/s = 2786.48 MiB/s
+Read 64
+All Time is 1167339 us
+IOPS is 13706.4
+Latency is 72.9587 us
+Throughput is 3.09793 GiB/s = 3172.28 MiB/s
+Read 128
+All Time is 1086329 us
+IOPS is 7364.25
+Latency is 135.791 us
+Throughput is 3.32895 GiB/s = 3408.84 MiB/s
+Read 256
+All Time is 1040310 us
+IOPS is 3845.01
+Latency is 260.077 us
+Throughput is 3.47621 GiB/s = 3559.64 MiB/s
+Read 512
+All Time is 1019878 us
+IOPS is 1961.02
+Latency is 509.939 us
+Throughput is 3.54585 GiB/s = 3630.95 MiB/s
+Read 1024
+All Time is 1009432 us
+IOPS is 990.656
+Latency is 1009.43 us
+Throughput is 3.58254 GiB/s = 3668.52 MiB/s
+
+index10
+Read 1
+All Time is 8087885 us
+IOPS is 126609
+Latency is 7.89833 us
+Throughput is 0.44713 GiB/s = 457.861 MiB/s
+Read 2
+All Time is 5521674 us
+IOPS is 92725.5
+Latency is 10.7845 us
+Throughput is 0.654934 GiB/s = 670.653 MiB/s
+Read 4
+All Time is 3352534 us
+IOPS is 76360.2
+Latency is 13.0958 us
+Throughput is 1.07869 GiB/s = 1104.57 MiB/s
+Read 8
+All Time is 2318728 us
+IOPS is 55202.7
+Latency is 18.1151 us
+Throughput is 1.55962 GiB/s = 1597.05 MiB/s
+Read 16
+All Time is 1665518 us
+IOPS is 38426.5
+Latency is 26.0237 us
+Throughput is 2.1713 GiB/s = 2223.41 MiB/s
+Read 32
+All Time is 1294210 us
+IOPS is 24725.5
+Latency is 40.4441 us
+Throughput is 2.79424 GiB/s = 2861.3 MiB/s
+Read 64
+All Time is 1136702 us
+IOPS is 14075.8
+Latency is 71.0439 us
+Throughput is 3.18143 GiB/s = 3257.78 MiB/s
+Read 128
+All Time is 1052737 us
+IOPS is 7599.24
+Latency is 131.592 us
+Throughput is 3.43517 GiB/s = 3517.62 MiB/s
+Read 256
+All Time is 1012442 us
+IOPS is 3950.84
+Latency is 253.111 us
+Throughput is 3.57189 GiB/s = 3657.62 MiB/s
+Read 512
+All Time is 992085 us
+IOPS is 2015.96
+Latency is 496.043 us
+Throughput is 3.64518 GiB/s = 3732.67 MiB/s
+Read 1024
+All Time is 987633 us
+IOPS is 1012.52
+Latency is 987.633 us
+Throughput is 3.66162 GiB/s = 3749.5 MiB/s
+
+index20
+Read 1
+All Time is 7941320 us
+IOPS is 128946
+Latency is 7.7552 us
+Throughput is 0.455382 GiB/s = 466.311 MiB/s
+Read 2
+All Time is 5359913 us
+IOPS is 95523.9
+Latency is 10.4686 us
+Throughput is 0.6747 GiB/s = 690.893 MiB/s
+Read 4
+All Time is 3284835 us
+IOPS is 77933.9
+Latency is 12.8314 us
+Throughput is 1.10092 GiB/s = 1127.34 MiB/s
+Read 8
+All Time is 2253011 us
+IOPS is 56812.9
+Latency is 17.6016 us
+Throughput is 1.60511 GiB/s = 1643.63 MiB/s
+Read 16
+All Time is 1626770 us
+IOPS is 39341.8
+Latency is 25.4183 us
+Throughput is 2.22301 GiB/s = 2276.37 MiB/s
+Read 32
+All Time is 1260749 us
+IOPS is 25381.7
+Latency is 39.3984 us
+Throughput is 2.8684 GiB/s = 2937.24 MiB/s
+Read 64
+All Time is 1109179 us
+IOPS is 14425.1
+Latency is 69.3237 us
+Throughput is 3.26037 GiB/s = 3338.62 MiB/s
+Read 128
+All Time is 1024977 us
+IOPS is 7805.05
+Latency is 128.122 us
+Throughput is 3.52821 GiB/s = 3612.89 MiB/s
+Read 256
+All Time is 986138 us
+IOPS is 4056.23
+Latency is 246.535 us
+Throughput is 3.66717 GiB/s = 3755.18 MiB/s
+Read 512
+All Time is 965571 us
+IOPS is 2071.31
+Latency is 482.786 us
+Throughput is 3.74528 GiB/s = 3835.17 MiB/s
+Read 1024
+All Time is 956183 us
+IOPS is 1045.82
+Latency is 956.183 us
+Throughput is 3.78205 GiB/s = 3872.82 MiB/s
+
+index30
+Read 1
+All Time is 7793284 us
+IOPS is 131395
+Latency is 7.61063 us
+Throughput is 0.464032 GiB/s = 475.169 MiB/s
+Read 2
+All Time is 5211746 us
+IOPS is 98239.6
+Latency is 10.1792 us
+Throughput is 0.693881 GiB/s = 710.534 MiB/s
+Read 4
+All Time is 3191841 us
+IOPS is 80204.5
+Latency is 12.4681 us
+Throughput is 1.13299 GiB/s = 1160.18 MiB/s
+Read 8
+All Time is 2181282 us
+IOPS is 58681.1
+Latency is 17.0413 us
+Throughput is 1.65789 GiB/s = 1697.68 MiB/s
+Read 16
+All Time is 1572133 us
+IOPS is 40709
+Latency is 24.5646 us
+Throughput is 2.30027 GiB/s = 2355.48 MiB/s
+Read 32
+All Time is 1225925 us
+IOPS is 26102.7
+Latency is 38.3102 us
+Throughput is 2.94988 GiB/s = 3020.68 MiB/s
+Read 64
+All Time is 1077696 us
+IOPS is 14846.5
+Latency is 67.356 us
+Throughput is 3.35562 GiB/s = 3436.15 MiB/s
+Read 128
+All Time is 996876 us
+IOPS is 8025.07
+Latency is 124.609 us
+Throughput is 3.62767 GiB/s = 3714.73 MiB/s
+Read 256
+All Time is 960324 us
+IOPS is 4165.26
+Latency is 240.081 us
+Throughput is 3.76574 GiB/s = 3856.12 MiB/s
+Read 512
+All Time is 939545 us
+IOPS is 2128.69
+Latency is 469.772 us
+Throughput is 3.84903 GiB/s = 3941.4 MiB/s
+Read 1024
+All Time is 930026 us
+IOPS is 1075.24
+Latency is 930.026 us
+Throughput is 3.88842 GiB/s = 3981.74 MiB/s
+
+index40
+Read 1
+All Time is 7684197 us
+IOPS is 133261
+Latency is 7.5041 us
+Throughput is 0.47062 GiB/s = 481.914 MiB/s
+Read 2
+All Time is 5055370 us
+IOPS is 101278
+Latency is 9.87377 us
+Throughput is 0.715345 GiB/s = 732.513 MiB/s
+Read 4
+All Time is 3123532 us
+IOPS is 81958.5
+Latency is 12.2013 us
+Throughput is 1.15777 GiB/s = 1185.56 MiB/s
+Read 8
+All Time is 2126864 us
+IOPS is 60182.5
+Latency is 16.6161 us
+Throughput is 1.70031 GiB/s = 1741.12 MiB/s
+Read 16
+All Time is 1527621 us
+IOPS is 41895.2
+Latency is 23.8691 us
+Throughput is 2.3673 GiB/s = 2424.11 MiB/s
+Read 32
+All Time is 1193506 us
+IOPS is 26811.8
+Latency is 37.2971 us
+Throughput is 3.03001 GiB/s = 3102.73 MiB/s
+Read 64
+All Time is 1047722 us
+IOPS is 15271.2
+Latency is 65.4826 us
+Throughput is 3.45162 GiB/s = 3534.45 MiB/s
+Read 128
+All Time is 968820 us
+IOPS is 8257.47
+Latency is 121.103 us
+Throughput is 3.73272 GiB/s = 3822.3 MiB/s
+Read 256
+All Time is 931521 us
+IOPS is 4294.05
+Latency is 232.88 us
+Throughput is 3.88218 GiB/s = 3975.35 MiB/s
+Read 512
+All Time is 913132 us
+IOPS is 2190.26
+Latency is 456.566 us
+Throughput is 3.96036 GiB/s = 4055.41 MiB/s
+Read 1024
+All Time is 903919 us
+IOPS is 1106.29
+Latency is 903.919 us
+Throughput is 4.00073 GiB/s = 4096.74 MiB/s
+
+index50
+Read 1
+All Time is 7525783 us
+IOPS is 136066
+Latency is 7.3494 us
+Throughput is 0.480526 GiB/s = 492.058 MiB/s
+Read 2
+All Time is 4941329 us
+IOPS is 103616
+Latency is 9.65103 us
+Throughput is 0.731854 GiB/s = 749.419 MiB/s
+Read 4
+All Time is 3021213 us
+IOPS is 84734.2
+Latency is 11.8016 us
+Throughput is 1.19698 GiB/s = 1225.71 MiB/s
+Read 8
+All Time is 2054653 us
+IOPS is 62297.6
+Latency is 16.052 us
+Throughput is 1.76007 GiB/s = 1802.31 MiB/s
+Read 16
+All Time is 1479247 us
+IOPS is 43265.3
+Latency is 23.1132 us
+Throughput is 2.44471 GiB/s = 2503.39 MiB/s
+Read 32
+All Time is 1159257 us
+IOPS is 27603.9
+Latency is 36.2268 us
+Throughput is 3.11953 GiB/s = 3194.4 MiB/s
+Read 64
+All Time is 1016888 us
+IOPS is 15734.3
+Latency is 63.5555 us
+Throughput is 3.55627 GiB/s = 3641.63 MiB/s
+Read 128
+All Time is 939214 us
+IOPS is 8517.76
+Latency is 117.402 us
+Throughput is 3.85038 GiB/s = 3942.79 MiB/s
+Read 256
+All Time is 903250 us
+IOPS is 4428.45
+Latency is 225.812 us
+Throughput is 4.00369 GiB/s = 4099.78 MiB/s
+Read 512
+All Time is 884799 us
+IOPS is 2260.4
+Latency is 442.399 us
+Throughput is 4.08718 GiB/s = 4185.27 MiB/s
+Read 1024
+All Time is 876473 us
+IOPS is 1140.94
+Latency is 876.473 us
+Throughput is 4.12601 GiB/s = 4225.03 MiB/s
+
+index60
+Read 1
+All Time is 7380439 us
+IOPS is 138745
+Latency is 7.20746 us
+Throughput is 0.489989 GiB/s = 501.749 MiB/s
+Read 2
+All Time is 4750128 us
+IOPS is 107787
+Latency is 9.27759 us
+Throughput is 0.761313 GiB/s = 779.584 MiB/s
+Read 4
+All Time is 2937835 us
+IOPS is 87139
+Latency is 11.4759 us
+Throughput is 1.23095 GiB/s = 1260.49 MiB/s
+Read 8
+All Time is 1985577 us
+IOPS is 64464.9
+Latency is 15.5123 us
+Throughput is 1.8213 GiB/s = 1865.01 MiB/s
+Read 16
+All Time is 1434709 us
+IOPS is 44608.3
+Latency is 22.4173 us
+Throughput is 2.5206 GiB/s = 2581.1 MiB/s
+Read 32
+All Time is 1125884 us
+IOPS is 28422.1
+Latency is 35.1839 us
+Throughput is 3.21199 GiB/s = 3289.08 MiB/s
+Read 64
+All Time is 988043 us
+IOPS is 16193.6
+Latency is 61.7527 us
+Throughput is 3.6601 GiB/s = 3747.94 MiB/s
+Read 128
+All Time is 912937 us
+IOPS is 8762.93
+Latency is 114.117 us
+Throughput is 3.96121 GiB/s = 4056.28 MiB/s
+Read 256
+All Time is 877214 us
+IOPS is 4559.89
+Latency is 219.304 us
+Throughput is 4.12252 GiB/s = 4221.46 MiB/s
+Read 512
+All Time is 859048 us
+IOPS is 2328.16
+Latency is 429.524 us
+Throughput is 4.2097 GiB/s = 4310.73 MiB/s
+Read 1024
+All Time is 851164 us
+IOPS is 1174.86
+Latency is 851.164 us
+Throughput is 4.24869 GiB/s = 4350.66 MiB/s
+
+index70
+Read 1
+All Time is 7227657 us
+IOPS is 141678
+Latency is 7.05826 us
+Throughput is 0.500347 GiB/s = 512.355 MiB/s
+Read 2
+All Time is 4618697 us
+IOPS is 110854
+Latency is 9.02089 us
+Throughput is 0.782977 GiB/s = 801.768 MiB/s
+Read 4
+All Time is 2842314 us
+IOPS is 90067.5
+Latency is 11.1028 us
+Throughput is 1.27232 GiB/s = 1302.86 MiB/s
+Read 8
+All Time is 1919794 us
+IOPS is 66673.8
+Latency is 14.9984 us
+Throughput is 1.88371 GiB/s = 1928.92 MiB/s
+Read 16
+All Time is 1394053 us
+IOPS is 45909.3
+Latency is 21.7821 us
+Throughput is 2.59411 GiB/s = 2656.37 MiB/s
+Read 32
+All Time is 1089822 us
+IOPS is 29362.6
+Latency is 34.0569 us
+Throughput is 3.31828 GiB/s = 3397.92 MiB/s
+Read 64
+All Time is 960562 us
+IOPS is 16656.9
+Latency is 60.0351 us
+Throughput is 3.76481 GiB/s = 3855.16 MiB/s
+Read 128
+All Time is 888740 us
+IOPS is 9001.51
+Latency is 111.093 us
+Throughput is 4.06906 GiB/s = 4166.71 MiB/s
+Read 256
+All Time is 854079 us
+IOPS is 4683.41
+Latency is 213.52 us
+Throughput is 4.23419 GiB/s = 4335.81 MiB/s
+Read 512
+All Time is 832757 us
+IOPS is 2401.66
+Latency is 416.378 us
+Throughput is 4.3426 GiB/s = 4446.83 MiB/s
+Read 1024
+All Time is 825180 us
+IOPS is 1211.86
+Latency is 825.18 us
+Throughput is 4.38248 GiB/s = 4487.66 MiB/s
+
+index80
+Read 1
+All Time is 7133506 us
+IOPS is 143548
+Latency is 6.96631 us
+Throughput is 0.50695 GiB/s = 519.117 MiB/s
+Read 2
+All Time is 4511560 us
+IOPS is 113486
+Latency is 8.81164 us
+Throughput is 0.80157 GiB/s = 820.808 MiB/s
+Read 4
+All Time is 2762654 us
+IOPS is 92664.5
+Latency is 10.7916 us
+Throughput is 1.30901 GiB/s = 1340.42 MiB/s
+Read 8
+All Time is 1860020 us
+IOPS is 68816.5
+Latency is 14.5314 us
+Throughput is 1.94424 GiB/s = 1990.91 MiB/s
+Read 16
+All Time is 1346037 us
+IOPS is 47547
+Latency is 21.0318 us
+Throughput is 2.68665 GiB/s = 2751.13 MiB/s
+Read 32
+All Time is 1056426 us
+IOPS is 30290.8
+Latency is 33.0133 us
+Throughput is 3.42318 GiB/s = 3505.33 MiB/s
+Read 64
+All Time is 927603 us
+IOPS is 17248.8
+Latency is 57.9752 us
+Throughput is 3.89858 GiB/s = 3992.14 MiB/s
+Read 128
+All Time is 857292 us
+IOPS is 9331.71
+Latency is 107.162 us
+Throughput is 4.21832 GiB/s = 4319.56 MiB/s
+Read 256
+All Time is 822270 us
+IOPS is 4864.58
+Latency is 205.567 us
+Throughput is 4.39799 GiB/s = 4503.54 MiB/s
+Read 512
+All Time is 806592 us
+IOPS is 2479.57
+Latency is 403.296 us
+Throughput is 4.48347 GiB/s = 4591.08 MiB/s
+Read 1024
+All Time is 800839 us
+IOPS is 1248.69
+Latency is 800.839 us
+Throughput is 4.51568 GiB/s = 4624.06 MiB/s
+
+index90
+Read 1
+All Time is 6948083 us
+IOPS is 147379
+Latency is 6.78524 us
+Throughput is 0.520479 GiB/s = 532.971 MiB/s
+Read 2
+All Time is 4326838 us
+IOPS is 118331
+Latency is 8.45086 us
+Throughput is 0.835791 GiB/s = 855.85 MiB/s
+Read 4
+All Time is 2668383 us
+IOPS is 95938.3
+Latency is 10.4234 us
+Throughput is 1.35525 GiB/s = 1387.78 MiB/s
+Read 8
+All Time is 1791879 us
+IOPS is 71433.4
+Latency is 13.9991 us
+Throughput is 2.01818 GiB/s = 2066.62 MiB/s
+Read 16
+All Time is 1298992 us
+IOPS is 49269
+Latency is 20.2967 us
+Throughput is 2.78395 GiB/s = 2850.77 MiB/s
+Read 32
+All Time is 1022554 us
+IOPS is 31294.2
+Latency is 31.9548 us
+Throughput is 3.53657 GiB/s = 3621.45 MiB/s
+Read 64
+All Time is 896249 us
+IOPS is 17852.2
+Latency is 56.0156 us
+Throughput is 4.03496 GiB/s = 4131.8 MiB/s
+Read 128
+All Time is 828762 us
+IOPS is 9652.95
+Latency is 103.595 us
+Throughput is 4.36354 GiB/s = 4468.26 MiB/s
+Read 256
+All Time is 793754 us
+IOPS is 5039.34
+Latency is 198.439 us
+Throughput is 4.55599 GiB/s = 4665.33 MiB/s
+Read 512
+All Time is 778872 us
+IOPS is 2567.82
+Latency is 389.436 us
+Throughput is 4.64304 GiB/s = 4754.47 MiB/s
+Read 1024
+All Time is 770604 us
+IOPS is 1297.68
+Latency is 770.604 us
+Throughput is 4.69286 GiB/s = 4805.48 MiB/s
+
+index100
+Read 1
+All Time is 6807935 us
+IOPS is 150413
+Latency is 6.64837 us
+Throughput is 0.531194 GiB/s = 543.942 MiB/s
+Read 2
+All Time is 4142758 us
+IOPS is 123589
+Latency is 8.09132 us
+Throughput is 0.872929 GiB/s = 893.879 MiB/s
+Read 4
+All Time is 2589631 us
+IOPS is 98855.8
+Latency is 10.1157 us
+Throughput is 1.39647 GiB/s = 1429.98 MiB/s
+Read 8
+All Time is 1732769 us
+IOPS is 73870.2
+Latency is 13.5373 us
+Throughput is 2.08703 GiB/s = 2137.11 MiB/s
+Read 16
+All Time is 1254267 us
+IOPS is 51025.8
+Latency is 19.5979 us
+Throughput is 2.88322 GiB/s = 2952.42 MiB/s
+Read 32
+All Time is 987336 us
+IOPS is 32410.4
+Latency is 30.8543 us
+Throughput is 3.66272 GiB/s = 3750.62 MiB/s
+Read 64
+All Time is 866945 us
+IOPS is 18455.6
+Latency is 54.1841 us
+Throughput is 4.17135 GiB/s = 4271.46 MiB/s
+Read 128
+All Time is 802646 us
+IOPS is 9967.03
+Latency is 100.331 us
+Throughput is 4.50551 GiB/s = 4613.65 MiB/s
+Read 256
+All Time is 768378 us
+IOPS is 5205.77
+Latency is 192.095 us
+Throughput is 4.70645 GiB/s = 4819.41 MiB/s
+Read 512
+All Time is 753887 us
+IOPS is 2652.92
+Latency is 376.943 us
+Throughput is 4.79692 GiB/s = 4912.04 MiB/s
+Read 1024
+All Time is 747171 us
+IOPS is 1338.38
+Latency is 747.171 us
+Throughput is 4.84003 GiB/s = 4956.19 MiB/s
