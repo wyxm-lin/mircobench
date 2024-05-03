@@ -48,14 +48,14 @@ void req_handler(erpc::ReqHandle *req_handle, void *) {
       CommonMsg *msg = reinterpret_cast<CommonMsg *>(req.buf_);
       msg->type = MsgType::CM;
       msg->u.CM.ms = ctx.ms;
-      better_memcpy(msg + 1, ptr, BLOCKSIZE);
+      // better_memcpy(msg + 1, ptr, BLOCKSIZE);
       rpc->resize_msg_buffer(&req, sizeof(CommonMsg) + BLOCKSIZE);
       rpc->enqueue_request(clientSess, kReqType, &req, &resp, cont_func,
                            (void *)k);
     }
 
     else if (msg->type == MsgType::Write) {
-      better_memcpy(ptr, msg + 1, BLOCKSIZE);
+      // better_memcpy(ptr, msg + 1, BLOCKSIZE);
       int64_t k = avail.front();
       avail.pop();
       erpc::MsgBuffer &req = reqs[k];
@@ -75,7 +75,7 @@ void req_handler(erpc::ReqHandle *req_handle, void *) {
     erpc::MsgBuffer &req = reqs[k];
     erpc::MsgBuffer &resp = resps[k];
     int64_t msg_size = req_handle->get_req_msgbuf()->get_data_size();
-    memcpy(req.buf_, msg, msg_size);
+    memcpy(req.buf_, msg, msg_size); // 转发消息 此处一定需要memcpy
     rpc->resize_msg_buffer(&req, msg_size);
     rpc->enqueue_request(serverSess, kReqType, &req, &resp, cont_func,
                          (void *)k);

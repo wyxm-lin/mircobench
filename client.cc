@@ -68,7 +68,7 @@ void req_handler(erpc::ReqHandle *req_handle, void *) {
 
   else if (ms->type == MsgType::Read) {
     void *dst = (void *)(ms->ptr + (seq - ms->pip) * BLOCKSIZE);
-    better_memcpy(dst, msg + 1, BLOCKSIZE);
+    // better_memcpy(dst, msg + 1, BLOCKSIZE);
     if (seq >= ms->tot) {
       auto &respbuf = req_handle->pre_resp_msgbuf_;
       rpc->enqueue_response(req_handle, &respbuf);
